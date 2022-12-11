@@ -1,19 +1,24 @@
 from string import ascii_lowercase
+
+
 def welcome_message():
     """
     Welcoming message with instructions and name input
     """
     print("~~~~~~~~~~~~~~")
-    print("welcome to F.R.I.E.N.D.S trivia, where your knowledge about your favorite TV show is tested in 30 questions!")
-    print("Choose the right answer from the 4 available options and find out your score at the end! Only one answer is correct!")
+    print("welcome to F.R.I.E.N.D.S trivia!")
+    print("Choose the right answer from the 4 available options!")
+    print("Only one answer is correct!")
     print("~~~~~~~~~~~~~~")
-    
+
+
 welcome_message()
 
 name = input("Enter your name to start the game:\n")
 
 """
-Add the structure for questions and answers. Add lists and tuples to store all questions and answers so the code isn't repetitive
+Add the structure for questions and answers
+Add dictionary to store all questions and answers so the code isn't repetitive
 Added multiple choices for valid correct answer
 """
 QUESTIONS = {
@@ -26,13 +31,13 @@ QUESTIONS = {
         "Una",
         "Angela",
     ],
-    "Who was the previous tendent of Ross's new appartment":[
+    "Who was the previous tendent of Ross's new appartment": [
         "Ugly naked guy",
         "Cute dressed guy",
         "The Fat neighbour",
         "Mike",
     ],
-    "What was the occupation of Rachel's fiancé Barry Farber":[
+    "What was the occupation of Rachel's fiancé Barry Farber": [
         "Orthodontist",
         "Doctor",
         "Dentist",
@@ -41,13 +46,13 @@ QUESTIONS = {
     "In which season Ross and Rachel get together for the first time": [
         "2", "8", "1", "3",
     ],
-    "What is Chandler Bing's middle name":[
+    "What is Chandler Bing's middle name": [
         "Muriel", "Eric", "Mathew", "John",
     ],
     "What was the profession of Joey's imaginary friend": [
         "Space cowboy", "Cowboy", "Penguin", "Actor",
     ],
-    "Which of the Friends characters broke a swing as a child":[ 
+    "Which of the Friends characters broke a swing as a child": [ 
         "Monica", "Phoebe", "Janice", "Joey",
     ],
     "What piece was missing from Rachel's plane when leaving for Paris": [
@@ -113,26 +118,39 @@ QUESTIONS = {
     "How much the ticket to Yemen cost": [
         "2100 dolars", "300 dolars", "They were free", "1000 dolars",
     ],
-    "Joey was cast as the butt double for which actor"[
+    "Joey was cast as the butt double for which actor": [
         "Al Pacino", "Matthew Perry", "George Clooney", "Alec Baldwin",
     ]
 }
 
-""""
+"""
+Adding counting of correct answers
+"""
+num_correct = 0
+"""
 for loop to iterate through questions and answers
 used sorted() to randomly display the answers
 """
+
 for num, (question, options) in enumerate(QUESTIONS.items(), start=1):
     print(f"\nQuestion {num}: ")
     print(f"{question}?\n")
+
     correct_answer = options[0]
+
     labeled_options = dict(zip(ascii_lowercase, sorted(options)))
+
     for label, option in labeled_options.items():
-        print(f"  {label}) {options}")
+        print(f"  {label}) {option}")
 
     answer_label = input("\n Your answer is:\n")
     answer = labeled_options.get(answer_label)
+
     if answer == correct_answer:
+        num_correct += 1
         print(f"Well done, {name}! You sure know your friends!")
     else:
-        print(f"You've been bamboozled! The answer is {correct_answer!r}, not {answer!r}\n")
+        print("You've been bamboozled!")
+        print(f"The answer is {correct_answer!r}, not {answer!r}\n")
+        
+print(f"\n You got {num_correct} correct out of 30")
