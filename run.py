@@ -142,9 +142,16 @@ for num, (question, options) in enumerate(QUESTIONS.items(), start=1):
 
     for label, option in labeled_options.items():
         print(f"  {label}) {option}")
+    """
+    Use a while loop to check the validity of inputed data
+    """
     while (answer_label := input("\n Your answer is:\n")) not in labeled_options:
         print(f"Please choose one of {', '.join(labeled_options)}")
     answer = labeled_options[answer_label]
+
+    """
+    If statement to check the correct answer
+    """
     if answer == correct_answer:
         num_correct += 1
         print(f"Well done, {name}! You sure know your friends!")
