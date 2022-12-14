@@ -69,13 +69,15 @@ A final function asks the user if he would like to restart the game, if answer i
 <br>
 - This project was deployed using Code Institute mock terminal for Heroku
 <br>
-A. In the Github repository, navigate to the Settings tab
+A. Fork or clone this repository
 <br>
-B. From there, select Pages from the left side
+B. Create a new Heroku app
 <br>
-C. From the source section drop-down menu select Main as a branch and then save
+C. Set the buildbacks to Python and NodeJs in that order
 <br>
-D. Once the main branch was selected, the page provided the link to the completed website
+D. Link the Heroku app to the repository
+<br>
+E.Click on Deploy
 <br>
 <h2>Credits</h2>
 <br>

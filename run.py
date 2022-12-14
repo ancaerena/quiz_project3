@@ -4,7 +4,7 @@ from string import ascii_lowercase
 
 def welcome_message():
     """
-    Welcoming message with instructions and name input
+    Welcoming message with instructions
     """
     print("~~~~~~~~~~~~~~")
     print("welcome to F.R.I.E.N.D.S trivia!")
@@ -15,12 +15,14 @@ def welcome_message():
 
 welcome_message()
 
-
+"""
+Input for name and while loop to avoid empty input
+"""
 while True:
     name = input("Enter your name to start the game:\n")
     if name.strip() != '':
         break
-    
+
 
 """
 Add the structure for questions and answers
@@ -65,7 +67,8 @@ QUESTIONS = {
 def organise_questions(questions, num_questions):
     """
     function to organise the questions and shuffle them 
-    so they are displayed in different order every time the player starts the game
+    so they are displayed in different order 
+    every time the player starts the game
     """
     num_questions = min(num_questions, len(questions))
     return random.sample(list(questions.items()), k=num_questions)
@@ -73,7 +76,8 @@ def organise_questions(questions, num_questions):
 
 def user_choice(question, options):
     """
-    function to display questions and add lowecase letters to enumerate the options 
+    function to display questions and 
+    add lowecase letters to enumerate the options 
     """
     print(f"{question}?\n")
     labeled_options = dict(zip(ascii_lowercase, options))
@@ -91,7 +95,8 @@ def user_choice(question, options):
 
 def show_questions(question, options):
     """
-    function to check for the right answer which is written as the first one, [0], in the QUESTION var
+    function to check for the right answer which is written as the first one,
+    [0], in the QUESTION var
     display feedback on each answer and shuffle through options with random
     """
     correct_answer = options[0]
@@ -121,7 +126,7 @@ def start_quiz():
         print(f"\nQuestion {num}: ")
         num_correct += show_questions(question, options)
     print(f"\n You got {num_correct} correct out of {num}\n")
-      
+
 
 def main():
     """
@@ -145,4 +150,3 @@ while True:
         break
     else:
         print("Please write 'yes' or 'no'")
-
