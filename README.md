@@ -1,10 +1,10 @@
 <h1>F.R.I.E.N.D.S Trivia Quiz Game</h1>
 <br>
 <br>
-Friends Trivia is a Python terminal game, which runs in Code Institute mock terminal on Heroku
-Users are asked to answer questions about Friends TV show to test their knowledge about the series. 
-Each question comes with options from which the user can choose.
-At the end, the user finds out their score.
+Friends Trivia is a Python terminal game, which runs in Code Institute mock terminal on Heroku.<br>
+Users are asked to answer questions about Friends TV show to test their knowledge about the series.<br> 
+Each question comes with options from which the user can choose.<br>
+At the end, the user finds out their score.<br>
 <br>
 <img src="assets/images/responsive.jpg" alt="multiple screen sizes diplaying the website">
 <br>
@@ -49,7 +49,7 @@ SyntaxError: invalid syntax<br>
 I sorted the issue by taking the name input out of the function<br>
 - Validate user answer if using uppercase - using lower() have transformed the answer to lowercase<br>
 <br>
-<h2>Data Model<h2>
+<h2>Data Model</h2>
 <br>
 The code is strucured on functions, one to print the initial message. An input request the name of the player, left outside of any functions to be able to be used in the feedback section.<br>
 The questions are all part of a tuple, each stored with their answers.<br>
@@ -79,6 +79,6 @@ D. Once the main branch was selected, the page provided the link to the complete
 <br>
 <h2>Credits</h2>
 <br>
-- My mentor Jubril Akolade for overviewing the project and suggesting a few changes to be more user-friendly
-- StockFlow - in finding the string to import for lowercase enumeration
-- Realpython.com in helping organising my code in functions
+- My mentor Jubril Akolade for overviewing the project and suggesting a few changes to be more user-friendly<br>
+- Stack Overflow - in finding the string to import for lowercase enumeration<br>
+- Realpython.com in helping organising my code in functions<br>

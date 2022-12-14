@@ -63,11 +63,18 @@ QUESTIONS = {
 
 
 def organise_questions(questions, num_questions):
+    """
+    function to organise the questions and shuffle them 
+    so they are displayed in different order every time the player starts the game
+    """
     num_questions = min(num_questions, len(questions))
     return random.sample(list(questions.items()), k=num_questions)
 
 
 def user_choice(question, options):
+    """
+    function to display questions and add lowecase letters to enumerate the options 
+    """
     print(f"{question}?\n")
     labeled_options = dict(zip(ascii_lowercase, options))
     for label, option in labeled_options.items():
@@ -75,6 +82,7 @@ def user_choice(question, options):
 
     """
     Use a while loop to check the validity of inputed data
+    added lower() to transform an uppercase input
     """    
     while (answer_label := input("\n Your answer is:\n").lower()) not in labeled_options:
         print(f"Please choose one of {', '.join(labeled_options)}")
@@ -82,6 +90,10 @@ def user_choice(question, options):
 
 
 def show_questions(question, options):
+    """
+    function to check for the right answer which is written as the first one, [0], in the QUESTION var
+    display feedback on each answer and shuffle through options with random
+    """
     correct_answer = options[0]
     shuffled_options = random.sample(options, k=len(options))
 
@@ -96,12 +108,14 @@ def show_questions(question, options):
 
 
 def start_quiz():
+    """
+    function to play the game, using the two var set at the start
+    """
     questions = organise_questions(QUESTIONS, TOTAL_QUESTIONS)
 
     num_correct = 0
     """
     for loop to iterate through questions and answers
-    used sorted() to randomly display the answers
     """
     for num, (question, options) in enumerate(questions, start=1):
         print(f"\nQuestion {num}: ")
@@ -110,19 +124,25 @@ def start_quiz():
       
 
 def main():
+    """
+    function to hold the starting of the game
+    """
 
     start_quiz()
 
 
 main()
 
-
-def play_again():
-    playAgain = input("Would you like to play again? 1 for Yes, 2 for No\n")
-    if playAgain == "1":
+"""
+while loop to offer option to start the game again
+"""
+while True:
+    answer = input("Do you want to play again? Reply with yes or no\n")
+    if answer == 'yes':
         start_quiz()
+    elif answer == 'no':
+        print("Thank you for playing the game")
+        break
     else:
-        print("Thank you for playing our game")
+        print("Please write 'yes' or 'no'")
 
-
-play_again()
