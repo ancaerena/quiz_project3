@@ -27,14 +27,15 @@ The user is then asked if he would like to give it another try one more time. If
 <hr>
 <h3>Existing Features</h3>
 <br>
-- It is featured on all 4 pages of the website, it is identical on all to allow easy navigation. It includes links to all pages, marking them active when lading on one of them, to keep track of the page the user is on.
-- This will allow the user to navigate through the pages easily, without needing to use the "back" button of a browser.
-<img src="assets/images/nav-bar.jpg" alt="navigation bar for little musketeers page">
+The 10 questions and the 4 options for each question are in radmon order. Each time the player plays the game, the questions and answers will be displayed differently.<br>
+After each choice, the user receives feedback if their answer is correct and also the correct answer of that question in case the user's choice wasn't the correct one.
+<img src="assets/images/receivefeedbackonyouranswer" alt="terminal display of the received feedback">
+<br>
+Each input for the answer is validated to make sure it is one of the options: a, b, c, or d. Uppercase of the four options is considered a valid answer, as the code transforms them in lowercase.
+<img src="assets/images/validatingnputdata" alt="terminal display of message when data not valid">
 <br>
 <h3>Features left to implement</h3>
-<br>
-<h4>Registration form</h4>
-- A form where users can register for the programme, with starting date, type of service(before-school or after-school), days of the week, with or without transport. This feature will also give the price at the end, depending on services selected
+- Questions stored in an external file
 <br>
 <h2>Fixed Bugs</h2>
 - User's answer was in the same line as the question. Resolved by adding \n at the end of the question.<br>
@@ -48,6 +49,13 @@ SyntaxError: invalid syntax<br>
 I sorted the issue by taking the name input out of the function<br>
 - Validate user answer if using uppercase - using lower() have transformed the answer to lowercase<br>
 <br>
+<h2>Data Model<h2>
+<br>
+The code is strucured on functions, one to print the initial message. An input request the name of the player, left outside of any functions to be able to be used in the feedback section.<br>
+The questions are all part of a tuple, each stored with their answers.<br>
+A helper function stores the code for the questions and number of questions. Another stores the options a user has and also their answer, validating it. The third function gives feedback on answers.<br>
+A main function calles the fuction to start the game.<br>
+A final function asks the user if he would like to restart the game, if answer is yes, the start the game function is called again.<br>
 <h2>Testing</h2>
 <br>
 - I've tested in my terminal and Heroku Terminal<br>
