@@ -5,8 +5,9 @@ Friends Trivia is a Python terminal game, which runs in Code Institute mock term
 Users are asked to answer questions about Friends TV show to test their knowledge about the series.<br> 
 Each question comes with options from which the user can choose.<br>
 At the end, the user finds out their score.<br>
+[Link to live version of the game](https://friendsquiz03.herokuapp.com/)
 <br>
-<img src="assets/images/responsive.jpg" alt="multiple screen sizes diplaying the website">
+<img src="assets/images/responsive_friends.jpg" alt="multiple screen sizes diplaying the website">
 <br>
 <br>
 <h2>How to play</h2>
@@ -17,11 +18,11 @@ After each answer, the user receives a feedback to highlight if their answer was
 After all 10 questions are answered, the user receives his total score.<br>
 The user is then asked if he would like to give it another try one more time. If he agrees, the game starts with the first question.
 <br>
-<h2>Plan</h3>
+<h2>Plan</h2>
 <br>
 - using LucidChart to frame out the code plan for the game. Maping out helped to see where I should start and where the game ends
 <br>
-<img src="assets/images/workflowchart" alt="chart with the game plan">
+<img src="assets/images/workflowchart.jpg" alt="chart with the game plan">
 <br>
 <h2>Features</h2>
 <hr>
@@ -29,13 +30,14 @@ The user is then asked if he would like to give it another try one more time. If
 <br>
 The 10 questions and the 4 options for each question are in radmon order. Each time the player plays the game, the questions and answers will be displayed differently.<br>
 After each choice, the user receives feedback if their answer is correct and also the correct answer of that question in case the user's choice wasn't the correct one.
-<img src="assets/images/receivefeedbackonyouranswer" alt="terminal display of the received feedback">
+<img src="assets/images/receivefeedbackonyouranswer.jpg" alt="terminal display of the received feedback">
 <br>
 Each input for the answer is validated to make sure it is one of the options: a, b, c, or d. Uppercase of the four options is considered a valid answer, as the code transforms them in lowercase.
-<img src="assets/images/validatingnputdata" alt="terminal display of message when data not valid">
+<img src="assets/images/validatinginputdata.jpg" alt="terminal display of message when data not valid">
 <br>
 <h3>Features left to implement</h3>
-- Questions stored in an external file
+- Questions stored in an external file<br>
+- Results to be stored in an external file
 <br>
 <h2>Fixed Bugs</h2>
 - User's answer was in the same line as the question. Resolved by adding \n at the end of the question.<br>
@@ -60,7 +62,7 @@ A final function asks the user if he would like to restart the game, if answer i
 <br>
 - I've tested in my terminal and Heroku Terminal<br>
 - Passed the code through PEP liner, except with a few spacing notifications, the code had no errors
-- 
+<br>
 <h3>Validator testing</h3>
 <br>
 -No errors were returned when passing through the PEP8 Linter - https://pep8ci.herokuapp.com/ just spacing suggestions
@@ -82,5 +84,5 @@ E.Click on Deploy
 <h2>Credits</h2>
 <br>
 - My mentor Jubril Akolade for overviewing the project and suggesting a few changes to be more user-friendly<br>
-- Stack Overflow - in finding the string to import for lowercase enumeration<br>
+- Stack Overflow - in finding the string to import for lowercase enumeration and finding the while loop for play again option<br>
 - Realpython.com in helping organising my code in functions<br>
