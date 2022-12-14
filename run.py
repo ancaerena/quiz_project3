@@ -105,7 +105,7 @@ def start_quiz():
     for num, (question, options) in enumerate(questions, start=1):
         print(f"\nQuestion {num}: ")
         num_correct += show_questions(question, options)
-    print(f"\n You got {num_correct} correct out of {num}")
+    print(f"\n You got {num_correct} correct out of {num}\n")
       
 
 def main():
@@ -114,3 +114,12 @@ def main():
     start_quiz()
 
 main()
+
+def play_again():
+    playAgain = input("Would you like to play again? 1 for Yes, 2 for No\n")
+    if playAgain == "1":
+        playing = start_quiz()
+    else:
+        print("Thank you for playing our game")
+    
+play_again()
