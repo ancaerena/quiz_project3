@@ -59,11 +59,11 @@ A final function asks the user if he would like to restart the game, if answer i
 <h2>Testing</h2>
 <br>
 - I've tested in my terminal and Heroku Terminal<br>
-- Passed the code through PP8 liner
+- Passed the code through PEP liner, except with a few spacing notifications, the code had no errors
 - 
 <h3>Validator testing</h3>
 <br>
--No errors were returned when passing through the PP8 
+-No errors were returned when passing through the PEP8 Linter - https://pep8ci.herokuapp.com/ just spacing suggestions
 <br>
 <h2>Deployment</h2>
 <br>
