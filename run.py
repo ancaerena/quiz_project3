@@ -13,11 +13,13 @@ def welcome_message():
     print("~~~~~~~~~~~~~~")
 
 
-def add_name():
-     while True:
-        name = input("Enter your name to start the game:\n")
-        if name.strip() != '':
-            break
+welcome_message()
+
+
+while True:
+    name = input("Enter your name to start the game:\n")
+    if name.strip() != '':
+        break
     
 
 """
@@ -42,7 +44,7 @@ QUESTIONS = {
     "Who was Rachel's prom date": [
         "Chip Matthews", "Matthew Chips", "Ross Geller", "Monica Geller",
     ],
-   "What was Joey's fake name": [
+    "What was Joey's fake name": [
         "Ken Adams", "Drake Ramoray", "Chandler Bing", "Troy Ribbianni",
     ],
     "Phoebe thought 'Kenny the Copy Guy' was who": [
@@ -71,7 +73,6 @@ def user_choice(question, options):
     for label, option in labeled_options.items():
         print(f"  {label}) {option}")
 
-
     """
     Use a while loop to check the validity of inputed data
     """    
@@ -86,7 +87,7 @@ def show_questions(question, options):
 
     answer = user_choice(question, shuffled_options)
     if answer == correct_answer:
-        print(f"Well done! You sure know your friends!")
+        print(f"Well done, {name}! You sure know your friends!")
         return True
     else:
         print("You've been bamboozled!")
@@ -109,17 +110,19 @@ def start_quiz():
       
 
 def main():
-    welcome_message()
-    add_name()
+
     start_quiz()
 
+
 main()
+
 
 def play_again():
     playAgain = input("Would you like to play again? 1 for Yes, 2 for No\n")
     if playAgain == "1":
-        playing = start_quiz()
+        start_quiz()
     else:
         print("Thank you for playing our game")
-    
+
+
 play_again()
